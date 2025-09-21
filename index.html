@@ -7,31 +7,31 @@
 <style>
   body {
     font-family: sans-serif;
-    line-height: 1.6;
-    margin: 20px;
+    line-height: 1.7;
+    margin: 16px;
   }
   h1 {
     border-bottom: 2px solid #444;
-    padding-bottom: 5px;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
   }
-  h2 {
-    margin-top: 25px;
-    color: #333;
-  }
-  ul {
-    list-style: none;
-    padding-left: 10px;
-  }
-  li {
-    margin: 4px 0;
-  }
+  h2 { margin: 22px 0 8px; }
+
+  /* リストをすっきり＋タップ領域を確保 */
+  ul { list-style: none; padding-left: 0; margin: 0; }
+  li { margin: 0; }
+
   a {
-    color: #0066cc;
+    display: block;             /* 行全体をタップできる */
+    padding: 10px 8px;          /* ≒ 44px行高に近づける */
     text-decoration: none;
   }
-  a:hover {
-    text-decoration: underline;
-    color: #ff6600;
+  a:link, a:visited { color: #0066cc; }
+  a:hover, a:active { text-decoration: underline; }
+
+  /* 画面が広い時は少しコンパクトに */
+  @media (min-width: 768px) {
+    a { padding: 6px 4px; }
   }
 </style>
 <body>
